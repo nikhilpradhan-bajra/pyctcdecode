@@ -129,6 +129,15 @@ class OutputBeam:
             return self.logit_score
         elif index == 4:
             return self.lm_score
+        
+        elif index == -1:
+            return self.lm_score
+        elif index == -2:
+            return self.logit_score
+        elif index == -3:
+            return self.text_frames
+        elif index == -4:
+            return self.last_lm_state
         else:
             raise IndexError(f"OutputBeam index out of range: {index}")
 
