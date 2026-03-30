@@ -119,6 +119,13 @@ class OutputBeam:
 
     def __getitem__(self, index: int) -> Any:
         """Support indexing for backwards compatibility with tuple format."""
+        print(f"Accessing Logit Score: {self.text}")
+        print(f"Accessing Logit Score: {self.last_lm_state}")
+        print(f"Accessing Logit Score: {self.text_frames}")
+        print(f"Accessing Logit Score: {self.logit_score}")
+        print(f"Accessing Logit Score: {self.lm_score}")
+
+
         if index == 0:
             return self.text
         elif index == 1:
