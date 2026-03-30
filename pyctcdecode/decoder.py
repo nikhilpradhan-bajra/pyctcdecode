@@ -133,6 +133,7 @@ class OutputBeam:
         elif index == -1:
             return self.lm_score
         elif index == -2:
+            print(f"Accessing Logit Score: {self.logit_score}")
             return self.logit_score
         elif index == -3:
             return self.text_frames
